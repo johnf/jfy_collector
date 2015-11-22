@@ -3,6 +3,9 @@
 require 'jfy/client'
 require 'pvoutput/client'
 require 'awesome_print'
+require 'yaml'
+
+pvoutput_config = YAML.load_file('/etc/jfy_collector/pvoutput.yaml')
 
 jfy = Jfy::Client.new
 
@@ -33,7 +36,7 @@ ap data
 # data = jfy.query_set_info(serial_num)
 # ap data
 
-pvoutput = PVOutput::Client.new('1234', 'fb6a2secret')
+pvoutput = PVOutput::Client.new(pvoutput_config[:system_id], pvoutput_config[:api_key])
 
 loop do
   data = jfy.query_normal_info(serial_num)
@@ -61,5 +64,6 @@ loop do
     :temperature      => data[:temperature],
     :voltage          => data[:voltage].first,
   )
-  sleep(60)
+
+  sleep(60 * 5)
 end

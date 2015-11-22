@@ -10,6 +10,14 @@ Install it:
 
 ## Usage
 
+Create a config file for PVOutput in ```/etc/jfy_collector/pvoutput.yaml```.
+
+``` yaml
+---
+:system_id: 123456
+:api_key: fb6a2e3
+```
+
 Run the JFY Collector in a screen or via init of some sort
 
     $ jfy_collector
