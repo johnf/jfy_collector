@@ -1,0 +1,13 @@
+[Unit]
+Description=Push JFY Solar Inverter stats to PVOutput
+Requires=network.target
+ 
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/jfy_collector
+TimeoutSec=30
+RestartSec=15s
+Restart=always
+ 
+[Install]
+WantedBy=multi-user.target
