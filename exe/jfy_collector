@@ -20,7 +20,7 @@ begin
 
   puts 'Offine Query'
   serial = jfy.offline_query
-rescue BadPacket, ReadTimeout => e
+rescue Jfy::BadPacket, Jfy::ReadTimeout => e
   puts "Bad Packet #{e} ... Retrying" if @debug
   puts if @debug
   retries += 1
