@@ -7,7 +7,10 @@ require 'yaml'
 
 pvoutput_config = YAML.load_file('/etc/jfy_collector/pvoutput.yaml')
 
-jfy = Jfy::Client.new
+params = {}
+params[:serial_port] = ARGV[0] if ARGV[0]
+
+jfy = Jfy::Client.new params
 
 retries = 0
 
