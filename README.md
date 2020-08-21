@@ -1,3 +1,5 @@
+[![Gem Version](https://badge.fury.io/rb/jfy_collector.svg)](https://badge.fury.io/rb/jfy_collector)
+
 # JFY Collector
 
 Pull stats from JFY Solar Inverter and push them to PVOutput
