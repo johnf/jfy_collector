@@ -1,6 +1,6 @@
 require: rubocop-rspec
 
-HashSyntax:
+Style/HashSyntax:
   EnforcedStyle: hash_rockets
 
 Style/Documentation:
@@ -9,14 +9,15 @@ Style/Documentation:
 Style/Lambda:
   Enabled: false
 
-Style/TrailingComma:
+Style/TrailingCommaInArguments:
   EnforcedStyleForMultiline: comma
 
-Metrics/LineLength:
+Layout/LineLength:
   Max: 120
 
 Style/ModuleFunction:
   Enabled: false
 
-AlignHash:
+Layout/HashAlignment:
   EnforcedHashRocketStyle: table
+
