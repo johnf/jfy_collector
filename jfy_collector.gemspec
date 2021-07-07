@@ -19,6 +19,8 @@ Gem::Specification.new do |spec|
   spec.require_paths = ['lib']
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
 
+  spec.required_ruby_version = '>= 2.5'
+
   spec.add_dependency 'awesome_print'
   spec.add_dependency 'jfy'
   spec.add_dependency 'pvoutput'
