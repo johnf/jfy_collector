@@ -18,7 +18,11 @@ Create a config file for PVOutput in ```/etc/jfy_collector/pvoutput.yaml```.
 ---
 :system_id: 123456
 :api_key: fb6a2e3
+:donation_mode: false
 ```
+
+At the moment you are a [PVOutput donator](https://pvoutput.org/donate.jsp) change ```donation_mode``` to
+true to enable the donation features of PVOutput.
 
 Run the JFY Collector in a screen or via init of some sort
 
